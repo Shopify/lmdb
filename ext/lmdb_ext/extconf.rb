@@ -10,6 +10,8 @@ if enable_config("bundled-lmdb", false) || !(find_header('lmdb.h') && have_libra
   $srcs = Dir.glob("#{$srcdir}/{,liblmdb/}*.c").map {|n| File.basename(n) }
 end
 
+append_cflags "-fvisibility=hidden"
+
 have_header 'limits.h'
 have_header 'string.h'
 have_header 'stdlib.h'

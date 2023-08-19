@@ -104,7 +104,7 @@ static VALUE cEnvironment, cDatabase, cTransaction, cCursor, cError;
 #undef ERROR
 
 // BEGIN PROTOTYPES
-void Init_lmdb_ext();
+RUBY_FUNC_EXPORTED void Init_lmdb_ext();
 static MDB_txn* active_txn(VALUE self);
 static VALUE call_with_transaction(VALUE venv, VALUE self, const char* name, int argc, const VALUE* argv, int flags);
 static VALUE call_with_transaction_helper(VALUE arg);

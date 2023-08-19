@@ -1436,7 +1436,7 @@ static VALUE cursor_count(VALUE self) {
         return SIZET2NUM(count);
 }
 
-void Init_lmdb_ext() {
+RUBY_FUNC_EXPORTED void Init_lmdb_ext() {
         VALUE mLMDB;
 
         /**
